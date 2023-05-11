@@ -25,7 +25,7 @@ This project was created and published by me as part of my learnings at Lighthou
 ## Documentation
 
 The following functions are currently implemented:
-1. head: takes an array as its argument and returns the first element of the array.
+1. head: Takes an array as its argument and returns the first element of the array.
 
 head([1, 2, 3]);    //returns 1 for [1, 2, 3]
 
@@ -37,29 +37,76 @@ assertArraysEqual([0, 1, 3], [0, 1, 3]);  // returns true
 
 2. assertEqual: Takes two values as arguments and checks whether they are equal or not. If the two values are equal, the function returns true, otherwise it returns false.
 
-assertEqual("Lighthouse","Lighthouse");   //returns true
+3. assertEqual("Lighthouse","Lighthouse");   //returns true
 
 
-3. assertObjectsEqual: Takes two objects as arguments and checks whether they are equal or not. If the two objects are equal, the function returns true, otherwise it returns false.
+4. assertObjectsEqual: Takes two objects as arguments and checks whether they are equal or not. If the two objects are equal, the function returns true, otherwise it returns false.
 
 const multiColorShirtObject = { colors: ["red", "blue","green"], size: "medium" };
 const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue","green"] };
 assertObjectsEqual(multiColorShirtObject,anotherMultiColorShirtObject);    // returns true
 
-4. countLetters:  Takes a string as its argument and returns an object with a count of each letter in the string.
+5. countLetters:  Takes a string as its argument and returns an object with a count of each letter in the string.
 
 countLetters("lighthouse in the house");
 results["o"] === 2        // returns true
 
-5. countOnly: Takes an array of strings and an object of items to count as its arguments, and returns an object with a count of each item in the array that is specified in the object.
-6. eqArrays:
-7. eqObjects:
-8. findKeyByValue:
-9. flatten:
-10. letterPositions,
-11. map,
-12. middle,
-13. tail,
-14 takeUntil,
-15. without
+6. countOnly: Takes an array of strings and an object of items to count as its arguments, and returns an object with a count of each item in the array that is specified in the object.
+
+const names = ["John", "Jane", "John", "Mary", "John"];
+const counts = countOnly(names, { John: true, Jane: false, Mary: true });
+console.log(counts);             //returns { John: 3, Mary: 1 }
+
+7. eqArrays: Takes two arrays as its arguments and returns a boolean value indicating whether the two arrays are equal or not.
+
+eqArrays([1, 3, 4], [4, 3, 1])       // returns false
+
+8. eqObjects: Takes two objects as its arguments and returns a boolean value indicating whether the two objects are equal or not.
+
+const shirtObject = { size: "medium", color: "red" };
+const anotherShirtObject = { size: "medium", color: "red" };
+eqObjects(shirtObject , anotherShirtObject);      //returns true
+
+9. findKeyByValue: Takes an object and a value as its arguments, and returns the first key in the object that has the specified value. If no key is found with the specified value, the function returns undefined.
+
+const bestTVShowsByGenre = { sciFi: "The Expanse",
+  comedy: "Brooklyn Nine-Nine",
+  drama:  "The Wire"
+};
+findKeyByValue(bestTVShowsByGenre, "The Wire");      //returns drama
+
+10. flatten: Takes an array as its argument and returns a new array with all nested arrays flattened into a single level array.
+
+const arr = [1,2,[3, 4],5,[6]];
+flatten(arr);        //returns [1,2,3,4,5,6]
+
+11. letterPositions: Takes a string as its argument and returns an object with the indices of each letter in the string. 
+
+const results = letterPositions("hello world");
+assertArraysEqual(results.h === [0])               //returns true
+
+12. map: Higher-order function in JavaScript that creates a new array by applying a given function to each element of an existing array.
+
+const words = ["ground", "control", "to", "major", "tom"];
+const results2 = map(words, word => word[0]);   // returns ['g', 'c', 't', 'm', 't']
+
+13. middle: Takes an array as its argument and returns the middle element(s) of the array. If the array has an even number of elements, the function returns an array with the two middle elements. If the array has an odd number of elements, the function returns an array with the single middle element.
+
+middle([1, 2, 3]);            //returns [2]
+
+14. tail: Takes an array as its argument and returns a new array containing all elements of the original array except for the first element. If the original array has only one element or is empty, the function returns an empty array.
+
+tail([1, 2, 3])      //returns [2,3]
+
+15 takeUntil: Takes two arguments: an array and a callback function. The function returns a new array that contains all the elements from the original array up to (but not including) the first element that causes the callback function to return a truthy value.
+
+const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
+const results2 = takeUntil(data2, x => x === ',');
+assertArraysEqual(results2,[ "I've", 'been', 'to', 'Hollywood' ]);
+
+16. without: Takes two arrays as its arguments: an array to modify and an array of elements to remove from the first array. The function returns a new array with all the elements of the first array except for the elements specified in the second array.
+
+const myInput = [1,2,3,4,5];
+const itemsToRemove = [3,5];
+without(myInput,itemsToRemove)            // returns [1,2,4]
   
