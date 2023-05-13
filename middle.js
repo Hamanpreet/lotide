@@ -1,4 +1,7 @@
 const middle = function(arr) {
+  if (arr.length === 0) {
+    return undefined;
+  }
   let result = [];
   if ((arr.length % 2) === 0) {
     let element = arr.length / 2;

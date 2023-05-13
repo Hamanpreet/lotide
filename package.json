@@ -1,0 +1,25 @@
+{
+  "name": "@hamanpreet/lotide",
+  "version": "1.0.0",
+  "description": "JavaScript code offering a wide range of functions for manipulating arrays, objects, strings, and other data types.",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hamanpreet/lotide.git"
+  },
+  "keywords": [
+    "Project1"
+  ],
+  "author": "Hamanpreet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hamanpreet/lotide/issues"
+  },
+  "homepage": "https://github.com/Hamanpreet/lotide#readme"
+}
