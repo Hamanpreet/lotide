@@ -19,7 +19,7 @@ describe ("#tail", () => {
     assert.deepEqual(tail([]), undefined);
   });
 
-  it ("returns '5' for ['5']", () => {
-    assert.deepEqual(tail(["hello", "world"]), ['world'])
+  it ("returns ['world'] for ['hello', 'world']", () => {
+    assert.deepEqual(tail(['hello', 'world']), ['world'])
   });
 });
