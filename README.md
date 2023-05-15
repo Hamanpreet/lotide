@@ -36,7 +36,7 @@ assertArraysEqual([0, 1, 3], [0, 1, 3]);  // returns true
 
 2. assertEqual: Takes two values as arguments and checks whether they are equal or not. If the two values are equal, the function returns true, otherwise it returns false.
 
- assertEqual("Lighthouse","Lighthouse");   //returns true
+assertEqual("Lighthouse","Lighthouse");   //returns true
 
 
 3. assertObjectsEqual: Takes two objects as arguments and checks whether they are equal or not. If the two objects are equal, the function returns true, otherwise it returns false.
