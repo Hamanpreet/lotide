@@ -1,11 +1,16 @@
-const findKeyByValue = function(myObj, myValue) {            //This function returns value of key which matches the value argument
-  let results;
-  for (const k in myObj) {                                   //looping over myObj object that returns key, when the value is equal to given value
+//This function returns value of key which matches the value argument
+
+const findKeyByValue = function(myObj, myValue) {            
+
+  //looping over myObj object that returns key, when the value is equal to given value
+  for (const k in myObj) {                                   
     if (myObj[k] === myValue) {
       return k;
     }
   }
-  return results;                                             //if there is no value, return undefined
+  return undefined;                                             
 };
 
-module.exports = findKeyByValue;                               // exporting the findKeyByValue function
+// exporting the findKeyByValue function
+
+module.exports = findKeyByValue;                               

@@ -1,12 +1,19 @@
-const tail = function(arr) {                 //This function returns the all the elements except the fiest element of array
+//This function returns the all the elements except the first element of array
+
+const tail = function(arr) {
+  const newArr = [];             
   if (arr.length === 0) {
-    return undefined;                            //returns undefined if the array is empty
+    //returns undefined if the array is empty
+    return undefined;                            
   }
-  let newArr = [];
-  for (let i = 1; i < arr.length; i++) {           //pushes all the elements except the first element
+ 
+  for (let i = 1; i < arr.length; i++) {
+    //pushes all the elements except the first element
     newArr.push(arr[i]);
   }
   return newArr;
 };
 
-module.exports = tail;                             // exporting the tail function
+// exporting the tail function
+
+module.exports = tail;                             

@@ -1,4 +1,7 @@
-const head   = require('./head');                                   // This is a collection of all the functions of lotide. 
+
+  // This is a collection of all the functions of lotide. 
+
+const head   = require('./head');                                 
 const tail   = require('./tail');
 const middle = require('./middle');
 const assertArraysEqual   = require('./assertArraysEqual');
@@ -14,9 +17,11 @@ const map   = require('./map');
 const takeUntil   = require('./takeUntil');
 const without   = require('./without');
 const flatten = require("./flatten.js");
+const findKey = require("./findKey1.js");
 
+ // Exporting all the functions together using new syntax
 
-module.exports = {                                                  // Exporting all the functions together
+module.exports = {                                                 
   head,
   tail,
   middle,
@@ -32,5 +37,6 @@ module.exports = {                                                  // Exporting
   map,
   takeUntil,
   without,
-  flatten
+  flatten,
+  findKey
 };

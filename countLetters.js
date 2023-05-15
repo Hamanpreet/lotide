@@ -1,16 +1,24 @@
-const countLetters = function(sentence) {                  // this function returns a count of each of the letters in that sentence.
-  const results = {};                                
-  let sentenceNew = sentence.replace(/ /g, " ");          //removing the spaces from the input string
+// This function returns a count of each of the letters in that sentence.
+
+const countLetters = function(sentence) {                  
+  const results = {};
+
+  //removing the spaces from the input string
+
+  let sentenceNew = sentence.replace(/ /g, " ");          
   for (const letter of sentenceNew) {
     if (results[letter]) {
-      results[letter] += 1;                                //if the results object already has that specific letter key in it, add 1 
+      //if the results object already has that specific letter key in it, add 1 
+      results[letter] += 1;                                
     } else {
-      results[letter] = 1;                                 // if the key doesn't exist, make the key and set its value to 1
+      // if the key doesn't exist, make the key and set its value to 1
+      results[letter] = 1;                                 
     }
   }
-  return results;                                          // return the resulting results object
+  // return the resulting results object
+  return results;                                          
 };
 
+// exporting the countLetters function
 
-
-module.exports = countLetters;                             // exporting the countLetters function
+module.exports = countLetters;                             

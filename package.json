@@ -1,8 +1,8 @@
 {
   "name": "@hamanpreet/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JavaScript code offering a wide range of functions for manipulating arrays, objects, strings, and other data types.",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },

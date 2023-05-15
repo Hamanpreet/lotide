@@ -1,11 +1,16 @@
-const without = function(source, itemsToRemove) {         //function returns all the items except the itemsToRemove
+//function returns all the items except the itemsToRemove
+
+const without = function(source, itemsToRemove) {
   const newArr = [];
   for (let i  = 0; i < source.length; i++) {  
     if (!itemsToRemove.includes(source[i])) {
       newArr.push(source[i]);                            
     }
   }
-  return newArr;                               //returns the newArr at the end
+  //returns the newArr at the end
+  return newArr;                               
 };
 
-module.exports = without;                      // exports the without function
+// exports the without function
+
+module.exports = without;                      

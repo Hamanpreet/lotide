@@ -1,6 +1,9 @@
-const head = function(arr) {          //This function returns the first element of the array
+//This function returns the first element of the array
+
+const head = function(arr) {         
   return arr[0];
 };
-module.exports = head;                 //exporting the head function
+//exporting the head function
+module.exports = head;                 
 
 
